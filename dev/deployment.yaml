@@ -18,7 +18,7 @@ spec:
             claimName: demo-pv-claim
       containers:
         - name: geo
-          image: nanajanashia/argocd-app:1.0
+          image: busybox
           ports:
           - containerPort: 8080
           volumeMounts:
