@@ -12,8 +12,15 @@ spec:
       labels:
         app: geo
     spec:
+      volumes: 
+        - name: demo-pv-storage
+          persistentVolumeClaim:
+            claimName: demo-pv-claim
       containers:
         - name: geo
           image: nanajanashia/argocd-app:1.0
           ports:
           - containerPort: 8080
+          volumeMounts:
+            - mountPath: "/data"
+              name: ip2location-storage
