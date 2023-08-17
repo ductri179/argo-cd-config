@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: geo
-          image: registry.dv2corp3.pd.aws-ca-central-1.faultless.ca/pd-docker/dds-device-geo-processorapp:41.0.0-38
+          image: busybox:1.36
           ports:
           - containerPort: 8080

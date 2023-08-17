@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://bitbucket.absolute.com/scm/~trtran/eis-2023.git
+    repoURL: https://github.com/ductri179/argo-cd-config.git
     targetRevision: HEAD
     path: dev
   destination:
