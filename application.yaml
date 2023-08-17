@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: deploy-geolocation-service
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://bitbucket.absolute.com/scm/~trtran/eis-2023.git
+    targetRevision: HEAD
+    path: dev
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: eis-demo

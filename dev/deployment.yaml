@@ -1,0 +1,19 @@
+version: apps/v1
+kind: Deployment
+metadata:
+  name: geo-deployment
+spec:
+  selector:
+    matchLabels:
+      app: geo
+  replicas: 2
+  template:
+    metadata: 
+      labels:
+        app: geo
+    spec:
+      containers:
+        - name: geo
+          image: registry.dv2corp3.pd.aws-ca-central-1.faultless.ca/pd-docker/dds-device-geo-processorapp:41.0.0-38
+          ports:
+          - containerPort: 8080
