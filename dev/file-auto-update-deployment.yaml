@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: file-auto-update-deployment
+spec:
+  selector:
+    matchLabels:
+      app: file-auto-update
+  replicas: 1
+  template:
+    metadata: 
+      labels:
+        app: file-auto-update
+    spec:
+      volumes: 
+        - name: demo-pv-storage
+          persistentVolumeClaim:
+            claimName: demo-pv-claim
+      containers:
+        - name: geo
+          image: oscartran17/file-auto-update:1.0
+          ports:
+          - containerPort: 8080
+          volumeMounts:
+            - mountPath: "/data-tri"
+              name: demo-pv-storage
