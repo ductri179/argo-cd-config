@@ -17,7 +17,7 @@ spec:
           persistentVolumeClaim:
             claimName: demo-pv-claim
       containers:
-        - name: geo
+        - name: file-auto-update
           image: oscartran17/file-auto-update:1.0
           ports:
           - containerPort: 8080
