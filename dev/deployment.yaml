@@ -22,5 +22,5 @@ spec:
           ports:
           - containerPort: 8080
           volumeMounts:
-            - mountPath: "/data"
+            - mountPath: "/data-tri"
               name: demo-pv-storage
