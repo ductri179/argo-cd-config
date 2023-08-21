@@ -20,7 +20,7 @@ spec:
         - name: file-auto-update
           image: oscartran17/file-auto-update:2.0
           ports:
-          - containerPort: 8080
+          - containerPort: 8081
           volumeMounts:
             - mountPath: "/data-tri"
               name: demo-pv-storage
