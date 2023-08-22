@@ -31,4 +31,4 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: geo-config
-                  value: file.location
+                  key: file.location
