@@ -24,3 +24,9 @@ spec:
           volumeMounts:
             - mountPath: "/data-tri"
               name: demo-pv-storage
+          env:
+            - name: FILE_LOCATION
+              valueFrom:
+                configMapKeyRef:
+                  name: geo-config
+                  value: file.location

@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: geo-deployment
+  annotations:
+    reloader.stakater.com/auto: "true"
 spec:
   selector:
     matchLabels:
@@ -18,7 +20,7 @@ spec:
             claimName: demo-pv-claim
       containers:
         - name: geo
-          image: nginx
+          image: oscartran17/geo-demo:1.0
           ports:
           - containerPort: 8080
           volumeMounts:
