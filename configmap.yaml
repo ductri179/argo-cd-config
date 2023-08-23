@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: geo-config
+  name: demo-config
   namespace: eis-demo
 data:
-  file.location: /data-tri/test-file.txt
+  file.location: /demo-data/test-file.txt

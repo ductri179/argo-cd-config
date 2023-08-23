@@ -22,11 +22,11 @@ spec:
           ports:
           - containerPort: 8088
           volumeMounts:
-            - mountPath: "/data-tri"
+            - mountPath: "/demo-data"
               name: demo-pv-storage
           env:
             - name: FILE_LOCATION
               valueFrom:
                 configMapKeyRef:
-                  name: geo-config
+                  name: demo-config
                   key: file.location

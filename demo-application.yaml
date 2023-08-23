@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: deploy-geolocation-service
+  name: deploy-demo-service
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/ductri179/argo-cd-config.git
     targetRevision: HEAD
-    path: geo
+    path: demo
   destination:
     server: https://kubernetes.default.svc
     namespace: eis-demo

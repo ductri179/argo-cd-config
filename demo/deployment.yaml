@@ -1,34 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: geo-deployment
-  annotations:
-    reloader.stakater.com/auto: "true"
+  name: demo-deployment
 spec:
   selector:
     matchLabels:
-      app: geo
-  replicas: 1
+      app: demo
+  replicas: 2
   template:
     metadata: 
       labels:
-        app: geo
+        app: demo
     spec:
       volumes: 
         - name: demo-pv-storage
           persistentVolumeClaim:
             claimName: demo-pv-claim
       containers:
-        - name: geo
-          image: oscartran17/geo-demo:1.0
+        - name: demo
+          image: oscartran17/demo:1.0
           ports:
           - containerPort: 8080
           volumeMounts:
-            - mountPath: "/data-tri"
+            - mountPath: "/demo-data"
               name: demo-pv-storage
           env:
             - name: FILE_LOCATION
               valueFrom:
                 configMapKeyRef:
-                  name: geo-config
+                  name: demo-config
                   key: file.location
