@@ -4,4 +4,4 @@ metadata:
   name: demo-config
   namespace: eis-demo
 data:
-  file.location: /demo-data/test-file.txt
+  file.location: /demo-data/bob.png
