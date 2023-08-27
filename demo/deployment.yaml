@@ -18,7 +18,7 @@ spec:
             claimName: demo-pv-claim
       containers:
         - name: demo
-          image: oscartran17/demo:10.0
+          image: oscartran17/demo:11.0
           ports:
           - containerPort: 9999
           volumeMounts:
