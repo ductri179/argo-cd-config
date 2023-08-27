@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: deploy-demo-service
+  name: deploy-geolocation-service
   namespace: argocd
 spec:
   project: default
