@@ -18,15 +18,20 @@ spec:
             claimName: demo-pv-claim
       containers:
         - name: demo
-          image: oscartran17/demo:4.0
+          image: oscartran17/demo:10.0
           ports:
-          - containerPort: 8080
+          - containerPort: 9999
           volumeMounts:
             - mountPath: "/demo-data"
               name: demo-pv-storage
           env:
-            - name: FILE_LOCATION
+            - name: DB_PATH
               valueFrom:
                 configMapKeyRef:
                   name: demo-config
-                  key: file.location
+                  key: db.path
+            - name: LICENSE_PATH
+              valueFrom:
+                configMapKeyRef:
+                  name: demo-config
+                  key: license.path

@@ -4,4 +4,5 @@ metadata:
   name: demo-config
   namespace: eis-demo
 data:
-  file.location: /demo-data/bob.png
+  db.path: /demo-data/IP2LOCATION-DB.BIN
+  license.path: /demo-data/license.key
