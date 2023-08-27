@@ -18,7 +18,7 @@ spec:
             claimName: demo-pv-claim
       containers:
         - name: file-auto-update
-          image: oscartran17/file-auto-update:13.0
+          image: oscartran17/file-auto-update:14.0
           ports:
           - containerPort: 8080
           volumeMounts:
